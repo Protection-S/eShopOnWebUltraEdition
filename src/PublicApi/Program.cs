@@ -51,6 +51,16 @@ var baseUrlConfig = configSection.Get<BaseUrlConfiguration>();
 
 builder.Services.AddMemoryCache();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowVueApp", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var key = Encoding.ASCII.GetBytes(AuthorizationConstants.JWT_SECRET_KEY);
 builder.Services.AddAuthentication(config =>
 {
@@ -127,6 +137,9 @@ var app = builder.Build();
 app.Logger.LogInformation("PublicApi App created...");
 
 app.Logger.LogInformation("Seeding Database...");
+
+app.UseCors("AllowVueApp");
+
 
 using (var scope = app.Services.CreateScope())
 {
