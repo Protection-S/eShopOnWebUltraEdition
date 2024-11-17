@@ -1,5 +1,12 @@
 # Microsoft eShopOnWeb ASP.NET Core Reference Application
 
+Снизу будут инструкции для настройки проекта, я же выдам информацию по настройке и запуску админ панели.
+Для начала вам требуется запустить 3 проекта, Public Api, Web и Vue.js проект. Public Api и Web запускаем в терминале/powershell командой dotnet run, vue.js проект запускаем так-же в терминале командой npm install | npm run dev.
+Готово, теперь вы можете полностью взаимодействовать с обновленной версией данного проекта! (делайте все эти действия только после полной настройки самого проекта, все указанное имеется снизу)
+
+
+
+
 > eShop sample applications have been updated and moved to https://github.com/dotnet/eShop. Active development will continue there. We also recommend the [Reliable Web App](https://learn.microsoft.com/azure/architecture/web-apps/guides/reliable-web-app/overview) patterns guidance for building web apps with enterprise app patterns.
 
 Sample ASP.NET Core reference application, powered by Microsoft, demonstrating a single-process (monolithic) application architecture and deployment model. If you're new to .NET development, read the [Getting Started for Beginners](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Getting-Started-for-Beginners) guide.
